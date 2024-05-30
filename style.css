@@ -1,26 +1,38 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#opponent-choice, #your-choice {
+    width: 240px;
+    height: 240px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #opponent-choice {
-    width: 240px;
-    height: 240px;
-    background-color: pink;
-    margin-top: 10px;
+    background-color: white; /* Light red for opponent */
 }
 
 #your-choice {
-    width: 240px;
-    height: 240px;
-    background-color: yellow;
-    margin-top: 10px; 
+    background-color: white; /* Light green for you */
+}
+
+#opponent-choice:hover, #your-choice:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
 #choices {
+    display: flex;
+    justify-content: space-around;
     width: 240px;
     height: 80px;
-    background-color: green; 
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -28,4 +40,12 @@ body {
 #choices img {
     width: 80px;
     height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#choices img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
